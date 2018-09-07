@@ -230,6 +230,7 @@ func makeAdmin(){
 }
 
 func logout() {
+    print("\(currentUser.userName) has logged out.")
     isLoggedIn = false
     currentUser = Account.init(userName: "Null", password: "", birthday: Date())
 }
