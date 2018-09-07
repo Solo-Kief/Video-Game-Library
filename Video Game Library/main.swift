@@ -26,7 +26,7 @@ func addGame() {
     if isLoggedIn && currentUser.isAdmin {
         print("Please enter the name of the game you wish to add: ", terminator: "")
         let newGame = readLine()
-        print("Please enter the games rating. 0 = EC | 1 = E | 2 = E-10 | 3 = T | 4 = M | 5 = AO")
+        print("Please enter the game's rating. 0 = EC | 1 = E | 2 = E-10 | 3 = T | 4 = M | 5 = AO")
         if let rating = Int(readLine()!) {
             gameList.append(Game.init(name: newGame!, rating: rating))
         }

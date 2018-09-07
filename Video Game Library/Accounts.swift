@@ -39,6 +39,20 @@ class Account {
         }
     }
     
+    func isLegal(game: Game) -> Bool {
+        switch game.rating {
+        case "T":
+            return self.evaluate() >= 409968000
+        case "M":
+            self.evaluate()
+            return self.isAge18
+        case "AO":
+            return self.evaluate() >= 662256000
+        default:
+            return true
+        }
+    }
+    
     func changePassword(currentPassword: String, newPassword: String, verifyNewPassword: String) -> Bool {
         if currentPassword == self.password {
             if newPassword == verifyNewPassword{
@@ -53,20 +67,6 @@ class Account {
         else {
             print("The given password was incorrect.")
             return false
-        }
-    }
-    
-    func isLegal(game: Game) -> Bool {
-        switch game.rating {
-        case "T":
-            return self.evaluate() >= 409968000
-        case "M":
-            self.evaluate()
-            return self.isAge18
-        case "AO":
-            return self.evaluate() >= 662256000
-        default:
-            return true
         }
     }
     
