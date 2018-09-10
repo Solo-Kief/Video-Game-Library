@@ -1,7 +1,7 @@
 //  main.swift
 //  Video Game Library
 //
-//  Created by Solomon Keiffer on 8/30/18.
+//  Created by Solomon Kieffer on 8/30/18.
 //  Copyright © 2018 Phoenix Development. All rights reserved.
 //
 //  Functions as the menu/library.
@@ -11,7 +11,7 @@ import Foundation
 var gameList: [Game] = []
 var accountList: [Account] = []
 var isLoggedIn = false
-var currentUser: Account = Account(userName: "Null", password: "", birthday: Date())
+var currentUser = Account(userName: "Null", password: "", birthday: Date())
 
 gameList.append(Game.init(name: "Ninjabread Man", rating: 4))
 gameList.append(Game.init(name: "How To Be A Complete Bastard", rating: 4))
