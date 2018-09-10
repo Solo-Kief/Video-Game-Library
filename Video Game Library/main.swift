@@ -108,12 +108,12 @@ func checkOut() {
             }
             else if let input = Int(input){
                 if input > 0 && input < gameList.count + 1 {
-                    if currentUser.isLegal(game: game) {
+                    if currentUser.isLegal(game: gameList[input - 1]) {
                         gameList[input - 1].isCheckedOut = true
                         let format = DateFormatter()
                         format.dateStyle = DateFormatter.Style.long
-                        gameList[input].dueDate = Date.init(timeIntervalSinceNow: 1209600)
-                        print("\n\"\(gameList[input].name)\" has been checked out and is due by \(format.string(from: gameList[input].dueDate)).")
+                        gameList[input - 1].dueDate = Date.init(timeIntervalSinceNow: 1209600)
+                        print("\n\"\(gameList[input - 1].name)\" has been checked out and is due by \(format.string(from: gameList[input - 1].dueDate)).")
                         return
                     }
                     else {return print("You are not old enough to check out this game.")}
@@ -284,11 +284,11 @@ func run() {
                 print("\nThank you for using the video game library.\n")
                 finished = true
             default:
-                print("\nYou entered an invalid option. Please make a selection 1 - 8.\n")
+                print("\nYou entered an invalid option. Please make a selection 1 - 12.\n")
             }
         }
         else {
-            print("\nYou entered an invalid option. Please make a selection 1 - 8.\n")
+            print("\nYou entered an invalid option. Please make a selection 1 - 12.\n")
         }
     }
 }

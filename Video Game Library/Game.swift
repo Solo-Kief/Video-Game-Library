@@ -4,7 +4,7 @@
 //  Created by Solomon Kieffer on 8/30/18.
 //  Copyright © 2018 Phoenix Development. All rights reserved.
 //
-//  Framwork for storing game data.
+//  Framework for storing game data.
 
 import Foundation
 

@@ -38,13 +38,13 @@ class Account {
             return Int(birthday.timeIntervalSince1970)
         }
     }
-    
+
     func isLegal(game: Game) -> Bool {
         switch game.rating {
         case "T":
             return self.evaluate() >= 409968000
         case "M":
-            self.evaluate()
+            self.evaluate() //I don't care that you hurt your elbow
             return self.isAge18
         case "AO":
             return self.evaluate() >= 662256000
