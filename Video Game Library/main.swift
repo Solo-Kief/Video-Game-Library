@@ -170,11 +170,11 @@ func help() {
         case 12:
             print("This option will terminate the current session.")
         default:
-            print("\nYou entered an invalid option. Please make a selection 1 - 8.\n")
+            print("\nYou entered an invalid option. Please make a selection 1 - 12.\n")
         }
     }
     else {
-        print("\nYou entered an invalid option. Please make a selection 1 - 8\n")
+        print("\nYou entered an invalid option. Please make a selection 1 - 12\n")
     }
     print("")
 }

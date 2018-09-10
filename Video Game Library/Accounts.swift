@@ -44,7 +44,7 @@ class Account {
         case "T":
             return self.evaluate() >= 409968000
         case "M":
-            self.evaluate() //I don't care that you hurt your elbow
+            self.evaluate()
             return self.isAge18
         case "AO":
             return self.evaluate() >= 662256000
